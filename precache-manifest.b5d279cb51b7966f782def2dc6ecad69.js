@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ab89f9123efdec3fbc2cf3719bbf0b96",
+    "revision": "e9e229cb5352548988d8184ae2edf180",
     "url": "/songs-cart/index.html"
   },
   {
-    "revision": "00d1018b9a7a8a1e1c40",
+    "revision": "abe574e1c0cb12ba8d31",
     "url": "/songs-cart/static/css/main.4d369b83.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/songs-cart/static/js/2.4827319d.chunk.js"
   },
   {
-    "revision": "00d1018b9a7a8a1e1c40",
-    "url": "/songs-cart/static/js/main.c6cc3594.chunk.js"
+    "revision": "abe574e1c0cb12ba8d31",
+    "url": "/songs-cart/static/js/main.31274a25.chunk.js"
   },
   {
     "revision": "4f72cdf45b4a0af07819",
