@@ -1,26 +1,48 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react';
+import SongsList from './songsList';
+import Header from './Header';
+import Songs from './Songs';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+export default class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      cart: [],
+      total: 0
+    }
+  }
+
+  onSongRemoveHandler = (index) => {
+    let cart = this.state.cart;
+    cart.splice(index, 1);
+    this.setState({cart});
+  }
+
+  onCartClickHandler = (song) => {
+    let cart = this.state.cart;    
+    cart.push(song);
+    //DUPLICATE PURCHASES
+    for(let i=0; i<cart.length; i++) {
+      for(let j=i+1; j<cart.length; j++) {
+        if(cart[i].name === cart[j].name) {
+          cart.splice(j, 1);
+          return;
+        }
+      }
+    }
+    //
+    let total = cart;
+    total = total.reduce((prev, current) => prev + parseFloat(current.price), 0).toFixed(2);
+    this.setState({cart, total});
+  }
+  
+  render() {
+    return (
+      <div>
+        <Header cart={this.state.cart} onSongRemove={this.onSongRemoveHandler} total={this.state.total} />
+        <Songs songsList={SongsList} onCartClick={this.onCartClickHandler} />
+      </div>
+    )
+  }
 }
-
-export default App;
