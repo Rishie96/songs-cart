@@ -16,7 +16,9 @@ export default class App extends Component {
   onSongRemoveHandler = (index) => {
     let cart = this.state.cart;
     cart.splice(index, 1);
-    this.setState({cart});
+    let total = cart;
+    total = total.reduce((prev, current) => prev + parseFloat(current.price), 0).toFixed(2);
+    this.setState({cart, total});
   }
 
   onCartClickHandler = (song) => {

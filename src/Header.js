@@ -39,7 +39,7 @@ export default class Header extends Component {
                     <div className="cart-contents" id="cart">
                         {this.renderCart()}
                         <div className="cart-checkout">
-                            <span className="cart-total">Total: ${this.props.total}</span>
+                            {this.props.cart.length===0? null: <span className="cart-total">Total: ${this.props.total}</span>}                            
                             {this.props.cart.length===0? null: <button onClick={() => window.location.reload()} className="checkout">CHECKOUT</button>}
                         </div>
                     </div>
