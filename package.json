@@ -2,7 +2,7 @@
   "name": "cart",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/Rishie96/songs-car/",
+  "homepage": "https://rishie96.github.io/songs-cart/",
   "dependencies": {
     "billboard-top-100": "^2.4.18",
     "gh-pages": "^2.0.1",
