@@ -16,7 +16,13 @@ export default class Header extends Component {
     }
 
     renderCart = () => {
-        let cart = this.props.cart;        
+        let cart = this.props.cart;   
+        if(this.props.cart.length === 0)
+        return (
+            <div className="cart-item">
+                <span className="cart-empty">Your cart is empty.</span>
+            </div>
+        )     
         return cart.map((song, index) => {
                 return (
                     <div className="cart-item" key={song.name}>
@@ -33,7 +39,7 @@ export default class Header extends Component {
     render() {
         return (
             <div className="header-main">
-                <span className="brand">MU$IC</span>
+                <span className="brand">SONG ONE</span>
                 <div className="cart">
                     <i className="fa fa-shopping-cart" style={styleCart} onClick={this.toggleCart} ><sup className="cart-item-count">{this.props.cart.length}</sup></i>
                     <div className="cart-contents" id="cart">
@@ -50,7 +56,7 @@ export default class Header extends Component {
 }
 
 let styleCart = {
-    fontSize: '3.6vh', 
+    fontSize: '1.8vw', 
     color: '#cc9200', 
     marginRight: '0.4vw',
 }

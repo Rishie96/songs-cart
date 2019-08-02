@@ -1,7 +1,7 @@
 body {
   overflow-x: hidden;
   font-family: monospace;
-  background-color: rgb(26, 26, 26);
+  background-color: rgb(0, 0, 0);
 }
 
 .add-to-cart {
@@ -73,16 +73,15 @@ p {
 }
 
 .header-main {
-  background-color: rgb(48, 48, 48);
+  background-color: rgb(31, 31, 31);
   margin-left: 10%;
   margin-top: 0.5%;
   margin-bottom: 0.8%;
   width: 79%;
-  font-size: 22pt;
+  font-size: 2vw;
   text-align: center;
   color: rgb(255, 255, 255);
   font-family: Verdana;
-  box-shadow: 2px 2px 8px 2px rgb(32, 30, 30);
   border-radius: 5px;
   letter-spacing: 2vw;
 }
@@ -92,6 +91,7 @@ p {
 }
 
 .cart {
+  margin-right: 1%;
   float: right;
   letter-spacing: 0vw;
 }
@@ -102,7 +102,7 @@ hr {
 
 sup {
   margin-left: 8%;
-  font-size: 12pt;
+  font-size:  2vw;
   color: rgb(247, 172, 10);
 }
 
@@ -132,7 +132,13 @@ sup {
   margin-bottom: 2%;
 }
 
+.cart-empty {
+  font-size: 0.9vw;
+}
+
 .cart-item {
+  margin-top: 2%;
+  margin-bottom: 2%;
   text-align: left;
   color: black;
   width: 100%;
@@ -167,7 +173,7 @@ sup {
 }
 
 .cart-item-count {
-  font-size: 2.2vh;
+  font-size: 1.2vw;
   color: rgb(255, 255, 255);
 }
 

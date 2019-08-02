@@ -43,7 +43,7 @@ export default class App extends Component {
     return (
       <div>
         <Header cart={this.state.cart} onSongRemove={this.onSongRemoveHandler} total={this.state.total} />
-        <Songs songsList={SongsList} onCartClick={this.onCartClickHandler} />
+        <Songs songsList={SongsList} onCartClick={this.onCartClickHandler} />        
       </div>
     )
   }
